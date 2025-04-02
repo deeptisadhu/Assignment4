@@ -1,0 +1,16 @@
+string = input("enter text to write to the file:")
+file1 = open('output.txt','w')
+file1.write(string)
+print("Data successfully written to output.txt ")
+file1.close()
+
+string2 = input("enter additional text to append:")
+file2 = open('output.txt','a')
+file2.write("\n"+ string2)
+print("Data successfully appended. ")
+file2.close()
+file2 = open('output.txt','r')
+reading_file = file2.read()
+
+print("Final content of output.txt:\n",reading_file)
+file2.close()
